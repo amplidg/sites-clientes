@@ -255,19 +255,19 @@
   .check{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--gold-500),var(--gold-400));color:#141210;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:1px;box-shadow:0 6px 14px rgba(240,162,2,.35);font-weight:700;}
 
   /* Como funciona — step flow */
-  .steps{background:var(--gold-50);}
+  .steps{background:var(--black-950);}
   .steps-grid{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
   @media(max-width:1080px){.steps-grid{grid-template-columns:repeat(3,1fr);}}
   @media(max-width:620px){.steps-grid{grid-template-columns:1fr;}}
   .steps-connector{position:absolute;left:6%;right:6%;top:46px;height:0;border-top:2px dashed var(--gold-400);opacity:.5;z-index:0;}
-  .steps-connector .node{position:absolute;top:0;width:9px;height:9px;border-radius:50%;background:var(--gold-500);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--gold-50);}
+  .steps-connector .node{position:absolute;top:0;width:9px;height:9px;border-radius:50%;background:var(--gold-500);transform:translate(-50%,-50%);box-shadow:0 0 0 5px var(--black-950);}
   @media(max-width:1080px){.steps-connector{display:none;}}
-  .step-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--black-950),var(--black-800));border-radius:18px;padding:24px;color:#fff;box-shadow:0 14px 30px rgba(10,10,10,.18);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
-  .step-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(240,162,2,.4), transparent 70%);pointer-events:none;}
-  .step-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(10,10,10,.3);}
-  .step-card .num{position:relative;z-index:1;font-weight:800;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:1px;margin-bottom:14px;display:block;}
+  .step-card{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--gold-500),var(--gold-400));border-radius:18px;padding:24px;color:var(--ink);box-shadow:0 14px 30px rgba(0,0,0,.35);transition:transform .3s ease, box-shadow .3s ease;z-index:1;}
+  .step-card::after{content:"";position:absolute;top:-45%;right:-25%;width:150px;height:150px;background:radial-gradient(circle, rgba(20,18,16,.18), transparent 70%);pointer-events:none;}
+  .step-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.45);}
+  .step-card .num{position:relative;z-index:1;font-weight:800;font-size:11px;color:rgba(20,18,16,.4);letter-spacing:1px;margin-bottom:14px;display:block;}
   .step-card h4{position:relative;z-index:1;font-size:14.5px;margin-bottom:4px;}
-  .step-card p{position:relative;z-index:1;font-size:12px;color:#C7BDA6;}
+  .step-card p{position:relative;z-index:1;font-size:12px;color:rgba(21,18,16,.75);}
   .steps-cta{text-align:center;margin-top:44px;}
 
   /* Sobre */
@@ -602,8 +602,8 @@
 <section class="steps" id="como-funciona">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Como funciona</span>
-      <h2>Do interesse ao volante,<br>em 5 passos simples</h2>
+      <span class="eyebrow eyebrow-light">Como funciona</span>
+      <h2 class="on-dark">Do interesse ao volante,<br>em 5 passos simples</h2>
     </div>
     <div class="steps-grid reveal-stagger">
       <div class="steps-connector">
