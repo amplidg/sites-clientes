@@ -45,6 +45,71 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Como faço para alugar um carro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É simples e rápido: você entra em contato pelo WhatsApp e escolhe o veículo ideal entre as categorias disponíveis (hatch, sedan ou utilitário). Depois, é só consultar a disponibilidade, enviar os documentos exigidos, efetuar o pagamento e combinar a retirada ou entrega do veículo. Todo o processo é feito com atendimento próximo, sem burocracia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como faço para retirar um carro alugado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depois que a locação for confirmada e o pagamento realizado, você pode retirar o veículo em um dos locais de retirada da Tamo Junto Autolocar em Braço do Norte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês fazem entrega e retirada do veículo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Além da retirada presencial, oferecemos o pacote \"leva e traz\", em que o veículo é entregue e recolhido no endereço combinado com você. Esse serviço tem um acréscimo no valor da locação, mas garante mais praticidade para quem não pode se deslocar até a empresa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais documentos são necessários para alugar um carro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "São necessários a Carteira Nacional de Habilitação (CNH) válida e um comprovante de residência atualizado. Esses documentos são exigidos para formalizar o contrato de locação com segurança para as duas partes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais são as formas de pagamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Tamo Junto Autolocar aceita praticamente todas as formas de pagamento: cartão, PIX, dinheiro e boleto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O aluguel inclui seguro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, todos os veículos alugados já saem com seguro incluso, garantindo mais tranquilidade e segurança durante todo o período de uso do carro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Há limite de quilometragem rodada por dia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, existe um limite de quilometragem, mas ele varia de acordo com o número de diárias contratadas — quanto maior o período de locação, maior a franquia de km disponível. Para saber o limite exato do seu plano, é só consultar pelo WhatsApp."
+      }
+    }
+  ]
+}
+</script>
+
 <script>document.documentElement.classList.add('js');</script>
 <style>
   :root{
@@ -367,6 +432,18 @@
   .js .reveal-stagger.is-visible > *:nth-child(4){transition-delay:.19s;}
   .js .reveal-stagger.is-visible > *:nth-child(5){transition-delay:.24s;}
   .js .reveal-stagger.is-visible > *:nth-child(6){transition-delay:.29s;}
+  .js .reveal-stagger.is-visible > *:nth-child(7){transition-delay:.34s;}
+
+  /* FAQ */
+  .faq-list{display:flex;flex-direction:column;gap:14px;max-width:820px;margin:0 auto;}
+  .faq-item{background:#fff;border:1.5px solid #ECE4D4;border-radius:16px;overflow:hidden;transition:border-color .2s ease;}
+  .faq-item[open]{border-color:var(--gold-400);}
+  .faq-q{list-style:none;cursor:pointer;padding:20px 24px;font-weight:700;font-size:15.5px;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Poppins',sans-serif;}
+  .faq-q::-webkit-details-marker{display:none;}
+  .faq-q::marker{content:"";}
+  .faq-icon{flex:none;width:28px;height:28px;border-radius:50%;background:var(--gold-100);color:var(--gold-800);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;transition:transform .25s ease, background .2s ease, color .2s ease;}
+  .faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--gold-500);color:#141210;}
+  .faq-a{padding:0 24px 22px;color:var(--gray-600);font-size:14.5px;line-height:1.65;}
 
   /* Border-run */
   @property --angle{syntax:'<angle>';inherits:false;initial-value:0deg;}
@@ -740,6 +817,45 @@
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Enviar via WhatsApp</button>
         </form>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2>Tire suas dúvidas sobre a locação</h2>
+    </div>
+    <div class="faq-list reveal-stagger">
+      <details class="faq-item">
+        <summary class="faq-q">Como faço para alugar um carro?<span class="faq-icon">+</span></summary>
+        <div class="faq-a"><p>É simples e rápido: você entra em contato pelo WhatsApp e escolhe o veículo ideal entre as categorias disponíveis (hatch, sedan ou utilitário). Depois, é só consultar a disponibilidade, enviar os documentos exigidos, efetuar o pagamento e combinar a retirada ou entrega do veículo. Todo o processo é feito com atendimento próximo, sem burocracia.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Como faço para retirar um carro alugado?<span class="faq-icon">+</span></summary>
+        <div class="faq-a"><p>Depois que a locação for confirmada e o pagamento realizado, você pode retirar o veículo em um dos locais de retirada da Tamo Junto Autolocar em Braço do Norte.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Vocês fazem entrega e retirada do veículo?<span class="faq-icon">+</span></summary>
+        <div class="faq-a"><p>Sim. Além da retirada presencial, oferecemos o pacote "leva e traz", em que o veículo é entregue e recolhido no endereço combinado com você. Esse serviço tem um acréscimo no valor da locação, mas garante mais praticidade para quem não pode se deslocar até a empresa.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Quais documentos são necessários para alugar um carro?<span class="faq-icon">+</span></summary>
+        <div class="faq-a"><p>São necessários a Carteira Nacional de Habilitação (CNH) válida e um comprovante de residência atualizado. Esses documentos são exigidos para formalizar o contrato de locação com segurança para as duas partes.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Quais são as formas de pagamento?<span class="faq-icon">+</span></summary>
+        <div class="faq-a"><p>A Tamo Junto Autolocar aceita praticamente todas as formas de pagamento: cartão, PIX, dinheiro e boleto.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">O aluguel inclui seguro?<span class="faq-icon">+</span></summary>
+        <div class="faq-a"><p>Sim, todos os veículos alugados já saem com seguro incluso, garantindo mais tranquilidade e segurança durante todo o período de uso do carro.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Há limite de quilometragem rodada por dia?<span class="faq-icon">+</span></summary>
+        <div class="faq-a"><p>Sim, existe um limite de quilometragem, mas ele varia de acordo com o número de diárias contratadas — quanto maior o período de locação, maior a franquia de km disponível. Para saber o limite exato do seu plano, é só consultar pelo WhatsApp.</p></div>
+      </details>
     </div>
   </div>
 </section>
