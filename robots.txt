@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amplidg.github.io/sites-clientes/sitemap.xml
